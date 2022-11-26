@@ -18,11 +18,32 @@
 .slide-container {
   margin: 0 30px;
   overflow: hidden;
+  transition: 0.5s;
+  margin-right: -24px;
 }
 .card {
   background: transparent;
+  position: relative;
   border-radius: 8px;
   border: none;
+  overflow: hidden;
+  
+  
+}
+.card:hover .card-body2{
+  opacity: 9;
+}
+.card-body2{
+  opacity: 0;
+  width: 152px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom,rgba(4,8,15,0),#192133  90%);
+  padding: 10px;
+  transition: 0.5s;
 }
 .card2 {
   background: transparent;
@@ -43,6 +64,10 @@ bg2{
   height: 200px;
   border-radius: 8px 8px 8px 8px;
   z-index: 2;
+}
+.slide-container:hover {
+  transform: scale(1.1);
+  border-radius: 8px 8px 8px 8px;
 }
 .card .profile-details {
   display: flex;
